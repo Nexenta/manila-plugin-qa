@@ -1,1 +1,1 @@
-# manila-plugin-qa
+# cinder-plugin
