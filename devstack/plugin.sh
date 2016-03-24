@@ -9,14 +9,14 @@ if [[ "$1" == "stack" && "$2" == "install" ]]; then
     manila.share.drivers.nexenta.options.NEXENTA_CONNECTION_OPTS,\
     manila.share.drivers.nexenta.options.NEXENTA_NFS_OPTS,\
     manila.share.drivers.nexenta.options.NEXENTA_DATASET_OPTS,' /opt/stack/manila/manila/opts.py
-    sed -i '[identity]/a\
+    sed -i 'identity]/a\
     alt_tenant_name = alt_demo\
     alt_password = secretadmin\
     alt_username = alt_demo\
     tenant_name = demo\
     password = nova\
     username = demo', /opt/stack/tempest/etc/tempest.conf
-    sed -i '[share]/a\
+    sed -i 'share]/a\
     multitenancy_enabled = False\
     enable_protocols = nfs\
     enable_ip_rules_for_protocols = nfs\
